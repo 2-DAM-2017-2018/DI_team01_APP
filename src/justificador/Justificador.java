@@ -25,7 +25,7 @@ public class Justificador extends Application {
         
         stage.setScene(scene);
         stage.show();
-        
+
         //Prueba dani
     }
 
