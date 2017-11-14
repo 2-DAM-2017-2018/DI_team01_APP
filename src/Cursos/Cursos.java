@@ -5,6 +5,7 @@
  */
 package Cursos;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
@@ -15,8 +16,8 @@ public class Cursos {
     
     private final StringProperty nombre_curso;
 
-    public Cursos(StringProperty nombre_curso) {
-        this.nombre_curso = nombre_curso;
+    public Cursos(String nombre_curso) {
+        this.nombre_curso = new SimpleStringProperty (nombre_curso); 
     }
 
     public StringProperty getNombre_curso() {
