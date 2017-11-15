@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package justificador.Ventana1;
+package justificador;
 
 import java.net.URL;
 import java.util.ArrayList;

@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import justificador.Ventana1.Ventana1Controller;
 
 /**
  *
@@ -40,7 +39,7 @@ public class Justificador extends Application {
     public void initRootLayout(){
         try{
             FXMLLoader loader=new FXMLLoader();
-            loader.setLocation(Justificador.class.getResource("justificador/Ventana1.fxml"));
+            loader.setLocation(Justificador.class.getResource("Ventana1.fxml"));
             rootLayout=(AnchorPane) loader.load();
             
             Scene scene=new Scene(rootLayout);
@@ -48,7 +47,7 @@ public class Justificador extends Application {
             
             Ventana1Controller controlador=loader.getController();
             controlador.setMainApp(this);
-            //dfg
+            
             primaryStage.show();
         }
         catch(IOException e){
