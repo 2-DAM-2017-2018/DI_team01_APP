@@ -48,7 +48,7 @@ public class Justificador extends Application {
             
             Ventana1Controller controlador=loader.getController();
             controlador.setMainApp(this);
-            
+            //dfg
             primaryStage.show();
         }
         catch(IOException e){
