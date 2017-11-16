@@ -18,11 +18,13 @@ public class Alumnos {
     
     private final StringProperty nombre;
     private final StringProperty apellidos;
+    private final StringProperty curso;
 
     
-    public Alumnos(String nombre, String apellidos) {
+    public Alumnos(String nombre, String apellidos, String curso) {
         this.nombre = new SimpleStringProperty (nombre);
         this.apellidos = new SimpleStringProperty (apellidos);
+        this.curso = new SimpleStringProperty (curso);
     }
 
     public StringProperty getNombre() {
@@ -33,6 +35,10 @@ public class Alumnos {
         return apellidos;
     }
     
+    public StringProperty getCurso() {
+        return curso;
+    }
+    
     public void setNombre(String nombre) {
         this.nombre.set(nombre);
     }
@@ -40,4 +46,9 @@ public class Alumnos {
     public void setApellidos(String apellidos) {
         this.apellidos.set(apellidos);
     }
+    
+    public void setCurso(String curso) {
+        this.curso.set(curso);
+    }
+    
 }
