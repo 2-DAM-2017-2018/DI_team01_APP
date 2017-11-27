@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="justificador.Ventana2.Ventana2Controller">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="justificador.Ventana2.Ventana2Controller">
    <children>
-      <TitledPane animated="false" prefHeight="400.0" prefWidth="600.0" text="Faltas de alumnos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </TitledPane>
+      <SplitPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="60.0" text="Alumno:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="88.0" layoutY="58.0" prefHeight="25.0" prefWidth="104.0" />
+                  <RadioButton layoutX="159.0" layoutY="155.0" mnemonicParsing="false" text="Falta" />
+                  <RadioButton layoutX="162.0" layoutY="191.0" mnemonicParsing="false" text="Retraso" />
+                  <RadioButton layoutX="159.0" layoutY="232.0" mnemonicParsing="false" text="Justificar" />
+                  <Label layoutX="363.0" layoutY="61.0" text="Fecha:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="413.0" layoutY="58.0" />
+                  <Label layoutX="204.0" layoutY="60.0" text="Asignatura:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="288.0" layoutY="58.0" prefHeight="25.0" prefWidth="59.0" />
+                  <Button layoutX="229.0" layoutY="325.0" mnemonicParsing="false" text="Guardar" />
+                  <Button layoutX="337.0" layoutY="325.0" mnemonicParsing="false" text="Salir" />
+                  <TextArea layoutX="287.0" layoutY="155.0" prefHeight="94.0" prefWidth="226.0" />
+                  <Label layoutX="287.0" layoutY="128.0" text="Motivo:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="199.0" layoutY="14.0" text="JUSTIFICADOR" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>
