@@ -13,21 +13,10 @@
          <items>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView layoutY="3.0" prefHeight="398.0" prefWidth="175.0">
+                  <TableView layoutX="65.0" layoutY="22.0" prefHeight="398.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Cursos" />
+                      <TableColumn prefWidth="295.0" text="ALUMNOS Y CURSOS" />
                     </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-                  <TableView layoutX="175.0" layoutY="3.0" prefHeight="398.0" prefWidth="165.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="Alumnos" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
                   </TableView>
                </children>
             </AnchorPane>
