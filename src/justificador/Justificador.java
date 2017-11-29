@@ -21,18 +21,20 @@ import javafx.stage.Stage;
  */
 public class Justificador extends Application {
 
-    private  Stage primaryStage;
-    private  AnchorPane rootLayout;
+    private static Stage primaryStage;
+    private AnchorPane rootLayout;
 
     /**
      * @param args the command line arguments
      */
+    
+    
+    
+    
     private static ArrayList<Alumnos> alumnos;
-    
-    
+
     public static void rellenarDatos() {
         alumnos = new ArrayList<>();
-       
 
         Alumnos a1 = new Alumnos("Alejandro", "Ariza", "2ºDAM");
         alumnos.add(a1);
@@ -94,13 +96,13 @@ public class Justificador extends Application {
         Alumnos d5 = new Alumnos("Francisco", "Ariza", "2ºSMR");
         alumnos.add(d5);
 
-        
     }
-   
-    public static void main(String[] args) { 
-        
+
+    public static void main(String[] args) {
+
         launch(args);
         rellenarDatos();
+        
     }
 
     @Override
@@ -127,6 +129,25 @@ public class Justificador extends Application {
             e.printStackTrace();
         }
     }
+    public static void llamarSegundaVentana() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Justificador.class.getResource("Ventana2.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Ventana2");
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            dialogStage.show();
+        } catch (IOException e) {
+            e.toString();
+        }
+    }
+    
 
     
+
 }
+
+

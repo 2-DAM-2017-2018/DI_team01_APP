@@ -8,6 +8,7 @@ package justificador;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import justificador.Justificador;
 
@@ -74,5 +75,9 @@ public class Ventana1Controller implements Initializable {
     public void setMainApp(Justificador mainApp)
     {
         this.mainApp=mainApp;
+    }
+    @FXML
+    private void mostrarSegunda(){
+        Justificador.llamarSegundaVentana();
     }
 }

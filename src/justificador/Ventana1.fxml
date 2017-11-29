@@ -34,7 +34,7 @@
                   <RadioButton layoutX="73.0" layoutY="139.0" mnemonicParsing="false" text="Falta" />
                   <Button layoutX="15.0" layoutY="211.0" mnemonicParsing="false" text="Confirmar" />
                   <Button layoutX="120.0" layoutY="211.0" mnemonicParsing="false" text="Cancelar" />
-                  <Button layoutX="76.0" layoutY="278.0" mnemonicParsing="false" text="Justificar falta" />
+                  <Button layoutX="76.0" layoutY="278.0" mnemonicParsing="false" onAction="#mostrarSegunda" text="Justificar falta" />
                </children>
             </AnchorPane>
          </items>
