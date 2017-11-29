@@ -18,7 +18,9 @@ public class Asignaturas
     private ArrayList<String> AsignaturasDAM;
     private ArrayList<String> AsignaturasDAM2;
 
-    public Asignaturas() {
+    public Asignaturas() 
+    {
+        
     }
 
     public Asignaturas(ArrayList<String> AsignaturasSMR, ArrayList<String> AsignaturasDAM1, ArrayList<String> AsignaturasDAM2) {
