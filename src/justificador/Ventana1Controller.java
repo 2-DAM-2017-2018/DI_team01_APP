@@ -80,4 +80,10 @@ public class Ventana1Controller implements Initializable {
     private void mostrarSegunda(){
         Justificador.llamarSegundaVentana();
     }
+    
+    public void rellenaralumnos(ArrayList<String> alumnos){
+        for (int i = 0; i<alumnos.size()+1; i++) {
+            
+        }
+    }
 }
