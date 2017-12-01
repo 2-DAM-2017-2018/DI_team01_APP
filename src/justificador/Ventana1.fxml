@@ -13,9 +13,9 @@
          <items>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="65.0" layoutY="22.0" prefHeight="398.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tabla" layoutX="65.0" layoutY="22.0" prefHeight="398.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="295.0" text="ALUMNOS Y CURSOS" />
+                      <TableColumn fx:id="nombre_cursosAlumnos" prefWidth="295.0" text="ALUMNOS Y CURSOS" />
                     </columns>
                   </TableView>
                </children>
