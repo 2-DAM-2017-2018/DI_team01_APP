@@ -7,12 +7,10 @@ package justificador;
 
 import Datos.Alumnos;
 import java.io.IOException;
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -30,14 +28,6 @@ public class Justificador extends Application {
     /**
      * @param args the command line arguments
      */
-    
-    
-    
-    
-    //private static ArrayList<Alumnos> alumnos;
-
-    
-
     public static void main(String[] args) {
 
         launch(args);
@@ -88,10 +78,6 @@ public class Justificador extends Application {
             e.toString();
         }
     }
-    
-
-    
-
 }
 
 

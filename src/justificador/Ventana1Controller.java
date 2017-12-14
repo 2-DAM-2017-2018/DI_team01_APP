@@ -15,7 +15,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import justificador.Justificador;
 
 /**
  * FXML Controller class
@@ -45,11 +44,6 @@ public class Ventana1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-     //   Alumnos alum = new Alumnos("Manolo", "Muñoz", "2ºDam");
-//        personas.add(alum);
-     
-        
-       // alumnos = new ArrayList<>();
 
         Alumnos a1 = new Alumnos("Alejandro Ariza 2ºDAM");
         Alumnos a2 = new Alumnos("Felipe Perez 2ºDAM");
@@ -119,9 +113,6 @@ public class Ventana1Controller implements Initializable {
         tabla.setItems(alumnos);
     }    
     
-    
-    
-    
     private ArrayList <String> cursos;
 //    private ArrayList <String> alumnos;
     private ArrayList <String> fecha;
@@ -132,15 +123,6 @@ public class Ventana1Controller implements Initializable {
         ArrayList <String> fecha = new ArrayList<>();
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     public Ventana1Controller(ArrayList<String> cursos, ArrayList<String> alumnos, ArrayList<String> fecha, ArrayList<Alumnos> personas) {
         this.cursos = cursos;

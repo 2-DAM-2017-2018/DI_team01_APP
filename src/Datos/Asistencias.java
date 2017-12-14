@@ -50,13 +50,5 @@ public class Asistencias {
     
     public void setFecha(String fecha){
         this.fecha.set(fecha);
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+    } 
 }
