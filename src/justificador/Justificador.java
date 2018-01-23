@@ -6,13 +6,16 @@
 package justificador;
 
 import Datos.Alumnos;
+import Datos.AlumnosFaltas;
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +26,7 @@ public class Justificador extends Application {
 
     private static Stage primaryStage;
     private AnchorPane rootLayout;
+    private AnchorPane rootLayout2;
     private static ObservableList<Alumnos> alumnos = FXCollections.observableArrayList();
 
     /**
@@ -31,8 +35,6 @@ public class Justificador extends Application {
     public static void main(String[] args) {
 
         launch(args);
-       //rellenarDatos();
-        
     }
     
     public ObservableList<Alumnos> getAlumnos() {
@@ -49,13 +51,13 @@ public class Justificador extends Application {
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Justificador.class.getResource("Ventana1.fxml"));
+            loader.setLocation(Justificador.class.getResource("Ventana2.fxml"));
             rootLayout = (AnchorPane) loader.load();
 
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
 
-            Ventana1Controller controlador = loader.getController();
+            Ventana2Controller controlador = loader.getController();
             controlador.setMainApp(this);
 
             primaryStage.show();
@@ -63,19 +65,24 @@ public class Justificador extends Application {
             e.printStackTrace();
         }
     }
-    public static void llamarSegundaVentana() {
+    
+    public  void mostrarDatosAlumno(Alumnos alumno,ObservableList<AlumnosFaltas> faltas) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Justificador.class.getResource("Ventana2.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle("Ventana2");
-            dialogStage.initOwner(primaryStage);
-            Scene scene = new Scene(page);
-            dialogStage.setScene(scene);
-            dialogStage.show();
+            loader.setLocation(Justificador.class.getResource("Ventana3.fxml"));
+            rootLayout = (AnchorPane) loader.load();
+
+            Scene scene = new Scene(rootLayout);
+            primaryStage.setScene(scene);
+
+            Ventana3Controller controlador = loader.getController();
+            controlador.setMainApp(this);
+            controlador.setAlumno(alumno);
+            controlador.setFaltas(faltas);
+            primaryStage.show();
+            
         } catch (IOException e) {
-            e.toString();
+            e.printStackTrace();
         }
     }
 }

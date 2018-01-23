@@ -33,4 +33,5 @@ public class Asignaturas
     public StringProperty nombreAsignaturasProperty() {
         return nombreAsignaturas;
     }
+    
 }
