@@ -13,6 +13,8 @@ import javafx.beans.property.StringProperty;
 /**
  *
  * @author ITP1DAM
+ * Clase alumnos
+ * Atributo todo, contiene el nombre completo del alumno
  */
 public class Alumnos {
     

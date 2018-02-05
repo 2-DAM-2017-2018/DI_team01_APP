@@ -29,7 +29,18 @@ public class AlumnosFaltas {
     
 
     
-    
+    public StringProperty nombreAlumnoProperty() {
+        return this.nombreAlumno;
+    }
+    public StringProperty asignaturaProperty(){
+        return this.asignatura;
+    }
+    public StringProperty fechaProperty(){
+        return this.fecha;
+    }
+    public StringProperty tipo(){
+        return this.tipo;
+    }
 
     public String getNombreAlumno() {
         return nombreAlumno.get();

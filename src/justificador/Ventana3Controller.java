@@ -13,6 +13,8 @@ import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -31,17 +33,20 @@ public class Ventana3Controller implements Initializable {
     private Label datosAlumno;
     //@FXML
     //private TableColumn columnaAsignatura;
+    
     @FXML
-    private TableColumn<AlumnosFaltas,String> columnaFaltas;
+    private TableColumn<AlumnosFaltas,String> columnaAsignatura;
     @FXML
-    private TableColumn<AlumnosFaltas,String> columnaRetrasos;
+    private TableColumn<AlumnosFaltas,String> columnaTipoFalta;
     @FXML
     private TableColumn<AlumnosFaltas,String> columnaFecha;
     
-    @FXML
-    private TableColumn<AlumnosFaltas,String>  columnaAsignatura;
+    
     @FXML
     private TableView tabla;
+    @FXML
+    private Button bEliminar;
+    
     
     
 
@@ -50,7 +55,9 @@ public class Ventana3Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        columnaAsignatura.setCellValueFactory(cellData -> cellData.getValue().asignaturaProperty());
+        columnaTipoFalta.setCellValueFactory(cellData -> cellData.getValue().tipo());
+        columnaFecha.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
     }    
     void setMainApp(Justificador mainApp) {
         this.mainApp=mainApp;
@@ -65,13 +72,23 @@ public class Ventana3Controller implements Initializable {
          * Aquí esta el metodo donde falta mostrar los datos
          */
             
-            tabla.setItems( faltas);
-        
-        
-        
-            
-        
-        
+            tabla.setItems(faltas);
+       
+    }
+    @FXML
+    private void borrarFalta() {
+        int selectedIndex = tabla.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            tabla.getItems().remove(selectedIndex);
+        } else {
+            // Nothing selected.
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("No hay ningun alumno seleccionado");
+            alert.setHeaderText("No alumn selected");
+            alert.setContentText("Please select a alum in the table.");
+
+            alert.showAndWait();
+        }
     }
     
     
